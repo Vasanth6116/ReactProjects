@@ -3,9 +3,9 @@ function useCurrency(currency) {
   const [data, setData] = useState({});
   useEffect(() => {
     fetch(
-      `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`
+      `https://2026-01-06.currency-api.pages.dev/v1/currencies/${currency}.json`
     )
-      .then((res) => res.json)
+      .then((res) => res.json())
       .then((res) => setData(res[currency]));
   }, [currency]);
   console.log(data);
